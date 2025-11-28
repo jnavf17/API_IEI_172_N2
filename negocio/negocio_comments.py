@@ -45,3 +45,4 @@ def crear_comentario(numero, nombre, correo, contenido, id_post):
         return id_comentario
     except Exception as error:
         print(f'Error al guardar al usuario: {error}')
+        

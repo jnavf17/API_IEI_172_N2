@@ -76,3 +76,4 @@ def crear_usuario(nombre, nombre_usuario, correo, telefono, sitio_web, id_direcc
         return id_usuario
     except Exception as error:
         print(f'Error al guardar al usuario: {error}')
+        

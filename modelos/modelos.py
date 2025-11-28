@@ -81,3 +81,4 @@ class Usuario(Base):
     email = Column(String(255), nullable=False)
     contrasena_hash = Column(String(255), nullable=False)
     contrasena_salt = Column(String(255), nullable=False)
+    

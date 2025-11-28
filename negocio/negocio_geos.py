@@ -26,3 +26,4 @@ def crear_geolocalizacion(latitud, longitud):
         return id_geo
     except Exception as error:
         print(f'Error al guardar la geolocalización: {error}')
+        

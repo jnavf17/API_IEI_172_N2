@@ -47,3 +47,4 @@ def crear_publicacion(titulo, contenido, id_usuario):
         return id_publicacion
     except Exception as error:
         print(f'Error al guardar la geolocalización: {error}')
+        
