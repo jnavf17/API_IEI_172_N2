@@ -12,4 +12,4 @@ def obtener_objeto_campo(objeto, campo, valor):
     objeto_identificado = sesion.query(objeto).filter_by(campo=valor).first()
     if objeto_identificado.isinstance(objeto):
         return objeto_identificado
-    
+   

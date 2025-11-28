@@ -13,4 +13,4 @@ def crear_compania(nombre, slogan, negocio):
         return id_compania
     except Exception as error:
         print(f'Error al guardar la geolocalización: {error}')
-        
+    

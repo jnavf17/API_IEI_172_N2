@@ -15,4 +15,4 @@ def insetar_objeto(objeto):
         print(f"Error al guardar el objeto: {error}")
     finally:
         sesion.close()
-        
+    

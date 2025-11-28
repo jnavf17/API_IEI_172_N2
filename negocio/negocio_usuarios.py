@@ -8,6 +8,3 @@ def obtener_usuarios_api():
             print(usuario)
 
 obtener_usuarios_api()
-
-
-

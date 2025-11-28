@@ -60,7 +60,6 @@ def listado_usuarios():
                 [usuario.id, usuario.name, usuario.username, usuario.email, usuario.phone, usuario.website])
         print(tabla_usuarios)
 
-
 def crear_usuario(nombre, nombre_usuario, correo, telefono, sitio_web, id_direccion, id_compania):
     usuario = User(
         name=nombre,

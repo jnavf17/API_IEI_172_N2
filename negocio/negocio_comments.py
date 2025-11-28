@@ -31,7 +31,6 @@ def obtener_data_comentarios(url):
         print(
             f"La solicitud falló con el siguiente código de error: {respuesta.status_code}")
 
-
 def crear_comentario(numero, nombre, correo, contenido, id_post):
     comentario = Comment(
         id=numero,
