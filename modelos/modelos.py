@@ -74,10 +74,24 @@ class Comment(Base):
 class Usuario(Base):
     __tablename__ = 'usuarios'
     __table_args__ = {'comment': 'Usuarios de sistema.'}
-    id = Column(Integer, primary_key=True,
-                comment='Identificador único tabla usuarios.')
-    nombre = Column(String(100), nullable=False)
-    usuario = Column(String(50), nullable=False)
-    email = Column(String(255), nullable=False)
-    contrasena_hash = Column(String(255), nullable=False)
-    contrasena_salt = Column(String(255), nullable=False)
+    id = Column(
+        Integer,
+        primary_key=True,
+        comment='Identificador único tabla usuarios.')
+    nombre = Column(
+        String(100),
+        nullable=False)
+    usuario = Column(
+        String(50),
+        nullable=False)
+    email = Column(
+        String(255),
+        nullable=False)
+    contrasena_hash = Column(
+        String(255),
+        nullable=False,
+        comment='Contraseña + Salt hasheada.')
+    contrasena_salt = Column(
+        String(255),
+        nullable=False,
+        comment='Salt única de la contraseña.')

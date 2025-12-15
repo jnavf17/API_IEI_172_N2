@@ -15,6 +15,7 @@ def listado_geolocalizaciones():
                 [geolocalizacion.id, geolocalizacion.lat, geolocalizacion.lng])
         print(tabla_geolocalizaciones)
 
+
 def crear_geolocalizacion(latitud, longitud):
     geo = Geo(
         lat=latitud,

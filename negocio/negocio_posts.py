@@ -35,6 +35,7 @@ def listado_publicaciones():
                 [publicacion.id, publicacion.title, publicacion.body])
         print(tabla_publicaciones)
 
+
 def crear_publicacion(titulo, contenido, id_usuario):
     publicacion = Post(
         title=titulo,
