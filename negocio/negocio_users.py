@@ -7,7 +7,7 @@ from negocio import crear_geolocalizacion, crear_direccion, crear_compania
 
 
 def obtener_data_users_api(url):
-    respuesta = requests.get(url)
+    respuesta = requests.get('https://jsonplaceholder.typicode.com/users')
     if respuesta.status_code == 200:
         print("Solicitud correcta, procesando data Users...")
         usuarios = respuesta.json()
