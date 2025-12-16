@@ -38,13 +38,53 @@ def listado_publicaciones():
 
 def crear_publicacion(titulo, contenido, id_usuario):
     publicacion = Post(
-        title=titulo,
-        body=contenido,
-        userId=id_usuario
+        title = titulo,
+        body = contenido,
+        userId = id_usuario
     )
     try:
         id_publicacion = insetar_objeto(publicacion)
         return id_publicacion
     except Exception as error:
         print(f'Error al guardar la geolocalización: {error}')
+
+def crear_post_api(url):
+    userId = input('Ingrese id de usuario: ')
+    id = input('Ingrese su ID: ')
+    tittle = input('Ingrese titulo: ')
+    body = input('Ingrese cuerpo: ')
+
+    Post = {
+        "userId": userId,
+        "id": id,
+        "tittle": tittle,
+        "body": body,
+    }
+
+    respuesta = requests.post(url,data=Post)
+    print(respuesta.text)
+
+def modificar_post_api(url):
+    userId = input('Ingrese id de usuario: ')
+    id = input('Ingrese su ID: ')
+    tittle = input('Ingrese titulo: ')
+    body = input('Ingrese cuerpo: ')
+    
+    url = f'{url}/{userId}'
+    
+    Post = {
+        "userId": userId,
+        "id": id,
+        "tittle": tittle,
+        "body": body,
+    }
+    
+    respuesta = requests.put(url,data=Post)
+    print(respuesta.text)
+
+def eliminar_post_api(url):
+    userId = input('Ingrese Id Usuario: ')    
+    url = f'{url}/{userId}'    
+    respuesta = requests.delete(url)
+    print(respuesta.text)
         
