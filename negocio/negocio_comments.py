@@ -2,7 +2,7 @@ import requests
 import json
 from modelos import Comment, Post
 from datos.insertar_datos import insetar_objeto
-from negocio import crear_publicacion
+from .negocio_posts import crear_publicacion
 
 
 def obtener_data_comentarios(url):
