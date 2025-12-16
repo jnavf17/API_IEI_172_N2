@@ -52,7 +52,7 @@ def crear_post_api(url):
     userId = input('Ingrese id de usuario: ')
     id = input('Ingrese su ID: ')
     tittle = input('Ingrese titulo: ')
-    body = input('Ingrese cuerpo: ')
+    body = input('Ingrese contenido: ')
 
     Post = {
         "userId": userId,
@@ -68,7 +68,7 @@ def modificar_post_api(url):
     userId = input('Ingrese id de usuario: ')
     id = input('Ingrese su ID: ')
     tittle = input('Ingrese titulo: ')
-    body = input('Ingrese cuerpo: ')
+    body = input('Ingrese contenido: ')
     
     url = f'{url}/{userId}'
     
