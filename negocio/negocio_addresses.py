@@ -1,5 +1,5 @@
 from modelos import Address
-from datos import insertar_objeto
+from datos.insertar_datos import insetar_objeto
 
 
 def crear_direccion(calle, departamento, ciudad, codigo_postal, geolocalizacion):
@@ -11,7 +11,7 @@ def crear_direccion(calle, departamento, ciudad, codigo_postal, geolocalizacion)
         geoId=geolocalizacion
     )
     try:
-        id_direccion = insertar_objeto(direccion)
+        id_direccion = insetar_objeto(direccion)
         return id_direccion
     except Exception as error:
         print(f'Error al guardar la dirección: {error}')

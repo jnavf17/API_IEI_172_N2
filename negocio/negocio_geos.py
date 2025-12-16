@@ -1,6 +1,6 @@
 from prettytable import PrettyTable
 from modelos import Geo
-from datos import insertar_objeto, obtener_listado_objetos
+from datos import insetar_objeto, obtener_listado_objetos
 
 
 def listado_geolocalizaciones():
@@ -22,7 +22,7 @@ def crear_geolocalizacion(latitud, longitud):
         lng=longitud
     )
     try:
-        id_geo = insertar_objeto(geo)
+        id_geo = insetar_objeto(geo)
         return id_geo
     except Exception as error:
         print(f'Error al guardar la geolocalización: {error}')

@@ -1,6 +1,6 @@
 from prettytable import PrettyTable
 from modelos import Post
-from datos import insertar_objeto, obtener_listado_objetos
+from datos import insetar_objeto, obtener_listado_objetos
 import requests
 
 
@@ -43,7 +43,7 @@ def crear_publicacion(titulo, contenido, id_usuario):
         userId=id_usuario
     )
     try:
-        id_publicacion = insertar_objeto(publicacion)
+        id_publicacion = insetar_objeto(publicacion)
         return id_publicacion
     except Exception as error:
         print(f'Error al guardar la geolocalización: {error}')

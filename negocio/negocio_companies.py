@@ -1,5 +1,5 @@
 from modelos import Company
-from datos import insertar_objeto, obtener_company_name
+from datos import insetar_objeto, obtener_company_name
 
 
 def crear_compania(nombre, slogan, negocio):
@@ -11,7 +11,7 @@ def crear_compania(nombre, slogan, negocio):
     cia = buscar_compania_nombre(nombre)
     if not cia:
         try:
-            id_compania = insertar_objeto(compania)
+            id_compania = insetar_objeto(compania)
             return id_compania
         except Exception as error:
             print(f'Error al guardar la geolocalización: {error}')

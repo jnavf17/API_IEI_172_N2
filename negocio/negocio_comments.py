@@ -1,7 +1,7 @@
 import requests
 import json
 from modelos import Comment, Post
-from datos import insertar_objeto
+from datos.insertar_datos import insetar_objeto
 from negocio import crear_publicacion
 
 
@@ -40,7 +40,7 @@ def crear_comentario(numero, nombre, correo, contenido, id_post):
         postId=id_post
     )
     try:
-        id_comentario = insertar_objeto(comentario)
+        id_comentario = insetar_objeto(comentario)
         return id_comentario
     except Exception as error:
         print(f'Error al guardar al usuario: {error}')

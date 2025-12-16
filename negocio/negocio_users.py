@@ -2,7 +2,7 @@ from prettytable import PrettyTable
 import requests
 import json
 from modelos import User
-from datos import insertar_objeto, obtener_listado_objetos, obtener_user_name
+from datos import insetar_objeto, obtener_listado_objetos, obtener_user_name
 from negocio import crear_geolocalizacion, crear_direccion, crear_compania
 
 
@@ -126,7 +126,7 @@ def crear_user_db(nombre, nombre_usuario, correo, telefono, sitio_web, id_direcc
             companyId=id_compania
         )
         try:
-            id_usuario = insertar_objeto(usuario)
+            id_usuario = insetar_objeto(usuario)
             return id_usuario
         except Exception as error:
             print(f'Error al guardar al usuario: {error}')
