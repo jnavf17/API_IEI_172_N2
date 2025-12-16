@@ -1,6 +1,6 @@
 import requests
 import json
-from modelos import Comment,Post
+from modelos import Comment, Post
 from datos.insertar_datos import insetar_objeto
 from .negocio_posts import crear_publicacion
 
