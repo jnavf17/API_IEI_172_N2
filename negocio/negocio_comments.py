@@ -6,7 +6,7 @@ from .negocio_posts import crear_publicacion
 
 
 def obtener_data_comentarios(url):
-    respuesta = requests.get(url)
+    respuesta = requests.get('https://jsonplaceholder.typicode.com/comments')
     if respuesta.status_code == 200:
         print("Solicitud correcta, procesando data...")
         comentarios = respuesta.json()

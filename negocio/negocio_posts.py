@@ -5,7 +5,7 @@ import requests
 
 
 def obtener_data_publicaciones(url):
-    respuesta = requests.get(url)
+    respuesta = requests.get('https://jsonplaceholder.typicode.com/posts')
     if respuesta.status_code == 200:
         print("Solicitud correcta, procesando data...")
         publicaciones = respuesta.json()
